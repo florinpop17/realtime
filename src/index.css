@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg-green: #4ade80;
+    --bg-red: #ef4444;
+    --bg-blue: #3b82f6;
+}
+
+body {
+    background: #eeeff3;
+}
+
+.votes:nth-child(1) {
+    --main-color: var(--bg-blue);
+}
+
+.votes:nth-child(2) {
+    --main-color: var(--bg-red);
+}
+
+.votes:nth-child(3) {
+    --main-color: var(--bg-green);
+}
+
+input:checked + label {
+    border-color: var(--main-color);
+}
+
+progress::-webkit-progress-bar {
+    background: #cbd5e1;
+    border-radius: 0.5rem;
+}
+
+progress::-webkit-progress-value {
+    background: var(--main-color);
+}
